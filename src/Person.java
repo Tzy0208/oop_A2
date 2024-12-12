@@ -17,20 +17,20 @@ public class Person {
     public void printInfo(){
         System.out.println("name:"+this.name+" "+"age:"+this.age+" "+"gender:"+this.gender);
     }
-    public void set_name(String n){
-        this.name=n;
+    public void set_name(String name){
+        this.name=name;
     }
     public String getName(){
         return name;
     }
-    public void set_age(int a){
-        this.age=a;
+    public void set_age(int age){
+        this.age=age;
     }
     public int getAge(){
         return age;
     }
-    public void set_gender(String g){
-        this.gender=g;
+    public void set_gender(String gender){
+        this.gender=gender;
     }
     public  String get_gender(){
         return gender;
