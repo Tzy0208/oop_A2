@@ -1,3 +1,5 @@
-public class Employee {
+
+public class Employee extends to Person{
+    
 
 }

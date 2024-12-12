@@ -1,3 +1,3 @@
-public class Visitor {
+public class Visitor extends to Person{
 
 }
