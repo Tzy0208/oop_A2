@@ -6,7 +6,7 @@ public class Ride {
     private String ridename;
     private Employee rideOper;
     private boolean isOpen;
-    private Queue<Visitor> waitingQueue;
+    private final Queue<Visitor> waitingQueue;
     
     public Ride(){
         rideID=0;
@@ -56,7 +56,7 @@ public class Ride {
         for (Visitor visitor : waitingQueue) {
             System.out.println("Visitor Name: " + visitor.getName() + ", Age: " + visitor.getAge() + 
                                ", Gender: " + visitor.getgender() + ", City: " + visitor.getCity() + 
-                               ", Visit Number: " + visitor.getVisitornum());
+                               ", Visit Number: " + visitor.getVisitorID());
         }
     }
 }

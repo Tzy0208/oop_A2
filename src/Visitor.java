@@ -1,15 +1,15 @@
 public class Visitor extends Person{
     private String city;
-    private int visitornum;
+    private int visitorID;
 
     public Visitor(){
        super();
     }
     
-    public Visitor(String name,int age,String gender,String city,int visitornum){
+    public Visitor(String name,int age,String gender,String city,int visitorID){
         super(name,age,gender);
         this.city=city;
-        this.visitornum=visitornum;
+        this.visitorID=visitorID;
     }
     public void setCity(String city){
         this.city=city;
@@ -17,10 +17,10 @@ public class Visitor extends Person{
     public String getCity(){
         return city;
     }
-    public  void setVisitornum(int visitornum){
-        this.visitornum=visitornum;
+    public  void setVisitorID(int visitorID){
+        this.visitorID=visitorID;
     }
-    public int getVisitornum(){
-        return visitornum;
+    public int getVisitorID(){
+        return visitorID;
     }
 }
