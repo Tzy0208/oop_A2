@@ -15,7 +15,12 @@ public class AssignmentTwo {
         ride1.addVisitorToQueue(visitor3);
         ride1.addVisitorToQueue(visitor4);
         ride1.addVisitorToQueue(visitor5);
-        
+        ride1.printQueue();
+        ride1.removeVisitorFromQueue(visitor1);
+        ride1.printQueue();
+
+
+
     }
     public void partFourA(){
 
