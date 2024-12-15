@@ -32,7 +32,7 @@ public abstract class Person {
     public void set_gender(String gender){
         this.gender=gender;
     }
-    public  String get_gender(){
+    public  String getgender(){
         return gender;
     }
 }
