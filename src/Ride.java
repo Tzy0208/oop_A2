@@ -1,9 +1,9 @@
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
-import java.util.Iterator;
 
-public class Ride implements RideInterface{
+public  class Ride implements RideInterface{
     private int rideID;
     private String ridename;
     private Employee rideOper;
@@ -86,5 +86,4 @@ public class Ride implements RideInterface{
             System.out.println("Visitor Name: " + visitor.getName() + ", "+"Age: " + visitor.getAge() +","+ "Gender: " + visitor.getgender() + ","+" City: " + visitor.getCity() +","+ "Visit ID: " + visitor.getVisitorID()); 
         }
     }
-    
 }
