@@ -79,7 +79,12 @@ public class AssignmentTwo {
         ride4.printRideHistory();
     }
     public void partSix(){
-
+        Ride ride5 = new Ride(5, "Bumper Cars", null, true);
+        for (int i = 1; i <= 5; i++) {
+            Visitor visitor = new Visitor("Visitor" + i, 20 + i, "Female", "City" + i, 500 + i);
+            ride5.addVisitorToHistory(visitor);
+        }
+        ride5.exportRideHistory("ride_history.csv");
     }
     public void partSeven(){
         

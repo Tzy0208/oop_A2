@@ -7,5 +7,6 @@ public interface RideInterface {
     boolean checkVisitorFromHistory(Visitor visitor);
     int numberOfVisitors();
     void printRideHistory();
+    void exportRideHistory(String fileName);
 } 
 

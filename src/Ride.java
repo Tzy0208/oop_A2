@@ -1,3 +1,5 @@
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -128,4 +130,18 @@ public void runOneCycle() {
     System.out.println("Cycle completed. Riders taken: " + ridersTaken);
     System.out.println("Total cycles run: " + numOfCycles);
 }
+@Override
+public void exportRideHistory(String fileName) {
+    try (FileWriter writer = new FileWriter(fileName)) {
+        for (Visitor visitor : rideHistory) {
+            writer.write(visitor.getName() + "," + visitor.getAge() + "," + visitor.getgender() + "," +
+                    visitor.getCity() + "," + visitor.getVisitorID() + "\n");
+        }
+        System.out.println("Ride history exported to file: " + fileName);
+    } catch (IOException e) {
+        System.out.println("Error while exporting ride history: " + e.getMessage());
+    }
+}
+
+
 }
