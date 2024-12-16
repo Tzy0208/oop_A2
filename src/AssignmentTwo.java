@@ -38,6 +38,10 @@ public class AssignmentTwo {
         boolean InHistory = ride2.checkVisitorFromHistory(AnyVisitor);
         System.out.println("ID: " + AnyVisitor.getVisitorID() + " Is Visitor in history ? " + InHistory);
         System.out.println("Number of Visitors in history: " + ride2.numberOfVisitors());
+        if (ride2.getisOpen()==true){
+        System.out.println("machine is turned on ");}
+        else {System.out.println("machine is turned off");
+        }
         ride2.printRideHistory();
     }
     
