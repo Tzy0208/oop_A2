@@ -1,3 +1,4 @@
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
@@ -86,4 +87,12 @@ public  class Ride implements RideInterface{
             System.out.println("Visitor Name: " + visitor.getName() + ", "+"Age: " + visitor.getAge() +","+ "Gender: " + visitor.getgender() + ","+" City: " + visitor.getCity() +","+ "Visit ID: " + visitor.getVisitorID()); 
         }
     }
+    public void sortHistory() {
+    if (rideHistory.isEmpty()) {
+        System.out.println("Ride history is empty. Nothing to sort.");
+        return;
+    }
+    Collections.sort(rideHistory, new VisComparator());
+    System.out.println("Ride history has been sorted.");
+}
 }
