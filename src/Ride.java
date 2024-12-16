@@ -11,13 +11,17 @@ public  class Ride implements RideInterface{
     private boolean isOpen;
     private final Queue<Visitor> waitingQueue;
     private final List<Visitor> rideHistory;
-    
+    private int maxRider;
+    private int numOfCycles;
+    private int ridersTaken;
+
     public Ride(){
         rideID=0;
         ridename="";
         waitingQueue = new LinkedList<>();
         this.rideHistory = new LinkedList<>();
-        
+        numOfCycles=0;
+        ridersTaken = 0;
     }
     public Ride(int rideID,String ridename,Employee rideOper,boolean isOpen){
         this.rideID=rideID;
@@ -94,5 +98,34 @@ public  class Ride implements RideInterface{
     }
     Collections.sort(rideHistory, new VisComparator());
     System.out.println("Ride history has been sorted.");
+}
+    public void setMaxRider(int maxRider) {
+     this.maxRider = maxRider;
+}
+    public int getMaxRider() {
+      return maxRider;
+}
+@Override
+public void runOneCycle() {
+    if (rideOper == null) {
+        System.out.println("No ride operator assigned. Cannot run the ride.");
+        return;
+    }
+    if (waitingQueue.isEmpty()) {
+        System.out.println("No visitors in the queue. Cannot run the ride.");
+        return;
+    }
+
+    System.out.println("Running one ride cycle...");
+    ridersTaken = 0;
+    while (!waitingQueue.isEmpty() && ridersTaken < maxRider) {
+        Visitor visitor = waitingQueue.poll(); 
+        addVisitorToHistory(visitor);         
+        ridersTaken++;
+    }
+
+    numOfCycles++;
+    System.out.println("Cycle completed. Riders taken: " + ridersTaken);
+    System.out.println("Total cycles run: " + numOfCycles);
 }
 }

@@ -46,7 +46,7 @@ public class AssignmentTwo {
     }
     
     public void partFourB(){
-        Ride ride3 = new Ride(3, "Haunted House", null, true);
+        Ride ride3 = new Ride(3, "Haunted House", new Employee("Jil",22,"Male","Conductor",12), true);
         Visitor visitor11 = new Visitor("Liam", 30, "Male", "Denver", 301);
         Visitor visitor12 = new Visitor("Mia", 25, "Female", "Austin", 302);
         Visitor visitor13 = new Visitor("Noah", 35, "Male", "Denver", 303);
@@ -64,7 +64,19 @@ public class AssignmentTwo {
         ride3.printRideHistory();
     }
     public void partFive(){
-
+        Ride ride4 = new Ride(4, "Water Slide", null, true);
+        ride4.setMaxRider(3);
+        for (int i = 1; i <= 10; i++) {
+            Visitor visitor = new Visitor("Visitor" + i, 20 + i, "Male", "City" + i, 400 + i);
+            ride4.addVisitorToQueue(visitor);
+        }
+        System.out.println("Queue before cycle:");
+        ride4.printQueue();
+        ride4.runOneCycle();
+        System.out.println("Queue after one cycle:");
+        ride4.printQueue();
+        System.out.println("Ride history after one cycle:");
+        ride4.printRideHistory();
     }
     public void partSix(){
 
