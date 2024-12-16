@@ -84,10 +84,14 @@ public class AssignmentTwo {
             Visitor visitor = new Visitor("Visitor" + i, 20 + i, "Female", "City" + i, 500 + i);
             ride5.addVisitorToHistory(visitor);
         }
-        ride5.exportRideHistory("ride_history.csv");
+        ride5.exportRideHistory("vistorRidehistory.csv");
     }
     public void partSeven(){
-        
+        Ride ride6 = new Ride(6, "Sky Drop", null, true);
+        ride6.importRideHistory("vistorRidehistory.csv");
+        System.out.println("Imported ride history:");
+    ride6.printRideHistory();
     }
+  
 }
 

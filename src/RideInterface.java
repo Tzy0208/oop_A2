@@ -8,5 +8,6 @@ public interface RideInterface {
     int numberOfVisitors();
     void printRideHistory();
     void exportRideHistory(String fileName);
+    void importRideHistory(String fileName);
 } 
 
