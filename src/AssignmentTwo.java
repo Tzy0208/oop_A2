@@ -46,7 +46,22 @@ public class AssignmentTwo {
     }
     
     public void partFourB(){
-
+        Ride ride3 = new Ride(3, "Haunted House", null, true);
+        Visitor visitor11 = new Visitor("Liam", 30, "Male", "Denver", 301);
+        Visitor visitor12 = new Visitor("Mia", 25, "Female", "Austin", 302);
+        Visitor visitor13 = new Visitor("Noah", 35, "Male", "Denver", 303);
+        Visitor visitor14 = new Visitor("Olivia", 28, "Female", "Austin", 304);
+        Visitor visitor15 = new Visitor("Sophia", 22, "Female", "Boston", 305);
+        ride3.addVisitorToHistory(visitor11);
+        ride3.addVisitorToHistory(visitor12);
+        ride3.addVisitorToHistory(visitor13);
+        ride3.addVisitorToHistory(visitor14);
+        ride3.addVisitorToHistory(visitor15);
+        System.out.println("Before sorting:");
+        ride3.printRideHistory();
+        ride3.sortHistory();
+        System.out.println("After sorting:");
+        ride3.printRideHistory();
     }
     public void partFive(){
 
