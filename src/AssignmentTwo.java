@@ -1,6 +1,12 @@
 public class AssignmentTwo {
     public static void main(String[] args) {
-
+        AssignmentTwo a2= new AssignmentTwo();
+        a2.partThree();
+        a2.partFourA();
+        a2.partFourB();
+        a2.partFive();
+        a2.partSix();
+        a2.partSeven();
     }
     public void partThree(){
         Ride ride1 = new Ride(1, "Ferris Wheel", new Employee("Bob",20,"Male","Repair the machine",10), true);
@@ -80,10 +86,16 @@ public class AssignmentTwo {
     }
     public void partSix(){
         Ride ride5 = new Ride(5, "Bumper Cars", null, true);
-        for (int i = 1; i <= 5; i++) {
-            Visitor visitor = new Visitor("Visitor" + i, 20 + i, "Female", "City" + i, 500 + i);
-            ride5.addVisitorToHistory(visitor);
-        }
+        Visitor visitor16 = new Visitor("Lia", 30, "Male", "Denver", 16);
+        Visitor visitor17 = new Visitor("Miy", 25, "Female", "Austin", 17);
+        Visitor visitor18 = new Visitor("Nova", 35, "Male", "Denver", 18);
+        Visitor visitor19 = new Visitor("Olivil", 28, "Female", "Austin", 19);
+        Visitor visitor20 = new Visitor("Soph", 22, "Female", "Boston", 20);
+        ride5.addVisitorToHistory(visitor16);
+        ride5.addVisitorToHistory(visitor17);
+        ride5.addVisitorToHistory(visitor18);
+        ride5.addVisitorToHistory(visitor19);
+        ride5.addVisitorToHistory(visitor20);
         ride5.exportRideHistory("vistorRidehistory.csv");
     }
     public void partSeven(){

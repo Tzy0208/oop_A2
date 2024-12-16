@@ -9,9 +9,9 @@ public abstract class Person {
         gender="";
     }
     public Person(String name,int age,String gender){
-        name=this.name;
-        age=this.age;
-        gender=this.gender;
+        this.name = name;
+        this.age=age;
+        this.gender=gender;
 
     }
     public void printInfo(){

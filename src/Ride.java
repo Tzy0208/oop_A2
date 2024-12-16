@@ -23,7 +23,7 @@ public  class Ride implements RideInterface{
         rideID=0;
         ridename="";
         waitingQueue = new LinkedList<>();
-        this.rideHistory = new LinkedList<>();
+        rideHistory = new LinkedList<>();
         numOfCycles=0;
         ridersTaken = 0;
     }
@@ -69,9 +69,9 @@ public  class Ride implements RideInterface{
     }
     @Override
     public void printQueue(){
-        System.out.println("Waiting Queue for Ride ID: " + rideID + ", Ride Name: " + ridename);
+        System.out.println("Waiting Queue for Ride ID: " + getrideID() + ", Ride Name: " + getridename());
         for (Visitor visitor : waitingQueue) {
-            System.out.println("Visitor Name: " + visitor.getName() + ","+ "Age: " + visitor.getAge() + ", Gender: " + visitor.getgender() + ", City: " + visitor.getCity() + ", Visit Number: " + visitor.getVisitorID());
+            System.out.println("Visitor Name: " + visitor.getName() + ","+ "Age: " + visitor.getAge() + ", Gender: " + visitor.getgender() + ", City: " + visitor.getCity() + ", VisitID: " + visitor.getVisitorID());
         }
     }
     @Override
@@ -89,7 +89,7 @@ public  class Ride implements RideInterface{
     @Override
     public void printRideHistory() {
         Iterator<Visitor> iterator = rideHistory.iterator(); 
-        System.out.println("Ride History for Ride ID: " + rideID + ", Ride Name: " + ridename);
+        System.out.println("Ride History for Ride ID: " + getrideID() + ", Ride Name: " + getridename());
         while (iterator.hasNext()) {
             Visitor visitor = iterator.next();
             System.out.println("Visitor Name: " + visitor.getName() + ", "+"Age: " + visitor.getAge() +","+ "Gender: " + visitor.getgender() + ","+" City: " + visitor.getCity() +","+ "Visit ID: " + visitor.getVisitorID()); 
@@ -122,7 +122,7 @@ public void runOneCycle() {
 
     System.out.println("Running one ride cycle...");
     ridersTaken = 0;
-    while (!waitingQueue.isEmpty() && ridersTaken < maxRider) {
+    while (!waitingQueue.isEmpty() && ridersTaken < getMaxRider()) {
         Visitor visitor = waitingQueue.poll(); 
         addVisitorToHistory(visitor);         
         ridersTaken++;
